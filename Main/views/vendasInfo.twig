@@ -1,0 +1,17 @@
+{% include 'header.html' %}
+
+    {# imprime todos os produtos, a comparação funciona com todos os produtos do array produtos #}
+    {% for produto in produtos %}
+
+        <h1>{{produto.nome}}</h1>
+        <p>{{produto.nome }} custo total R$ {{produto.totalVendidos}}</p>
+        <p>Em estoque: {{produto.estoque}}.</p>
+        <p>Quantidade Vendido: {{produto.qtdVendidos}}</p>
+        <p>{% if produto.estoque > 0 %}Corra para comprar antes de acabar.
+        {% else %}Infelizmente o estoque acabou.
+        {% endif %}
+        </p>
+    
+    {% endfor %}
+
+{% include 'footer.html' %}
