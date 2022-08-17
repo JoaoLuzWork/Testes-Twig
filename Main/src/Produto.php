@@ -1,6 +1,12 @@
 <?php
-require_once "src/FakeDB.php";
-class Produto
+//inclusão referente ao BD
+include './conexoo.php';
+$db = getConexao();
+$sql = "SELECT * FROM produtos";
+$statement = $db->prepare($sql);
+$statement->execute();
+
+class Produto   
 {
     private $id;
     private static $lastId = 1;
@@ -19,7 +25,7 @@ class Produto
         $this->custo = $custo;
         $this->estoque = $estoque;
         $this->qtdVendidos = 0;  
-        $this->totalVendidos = 0;  
+        $this->totalVendidos = 0;     
     }
 
     public function vender($qtd)

@@ -1,0 +1,19 @@
+*{  
+
+    margin: 0;
+    font-style: none;
+}
+
+.container{
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.form{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}

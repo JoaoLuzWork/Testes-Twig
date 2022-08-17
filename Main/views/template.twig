@@ -1,17 +1,16 @@
 {% include 'header.html' %}
-
-    <form action="vender.php" method="GET">
-
+    <div class="container">
+        
+        <form class="form" action="vender.php" method="GET">
+            
         {% for produto in produtos %}
+        
             <label>{{produto.nome}}:</label>
             <input type="number" name="{{produto.id}}"/><br/>
+            
         {% endfor %}
-        <select name="cond" id="">
-                <option value="0">Ver estoque</option>
-                <option value="1">fazer comprar</option>
-            </select>
-        
         <input type="submit">
     </form>
+    </div>
 
 {% include 'footer.html' %}
